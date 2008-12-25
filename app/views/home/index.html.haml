@@ -1,0 +1,24 @@
+- if logged_in?
+  != render :partial => 'spot/new', :object => @spot
+- else
+  %p 
+    Spot-A-Tron is a Twitter clone designed solely for posting 
+    %a{:href=>'http://www.spotify.com'} Spotify
+    URLs and sharing them with your friends, so it's easy to tell your friends what you're listening to.
+  %p
+    Planned features for Spot-A-Tron include specific user feeds, the ability to follow people (like Twitter),
+    Twitter integration, and whatever else I can be bothered to do.
+  %p
+    Spot-A-Tron was made by
+    %a{:href => 'http://www.shrieking.net'} Mac
+    over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on
+    %a{:href=>'http://www.veryhappythings.co.uk'} Very Happy Things
+    \.  It is written in 
+    %a{:href=>'http://www.rubyonrails.org'} Ruby on Rails 
+    and is forever indebted to the awesomeness of 
+    %a{:href=>'http://haml.hamptoncatlin.com/'} HAML
+    ,
+    %a{:href=>'http://kuler.adobe.com'} Kuler
+    and
+    %a{:href=>'http://www.nigella.com/'} Nigella
+    \.

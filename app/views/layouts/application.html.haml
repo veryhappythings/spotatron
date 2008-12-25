@@ -1,0 +1,36 @@
+!!! Strict
+%html
+  %head
+    != stylesheet_link_tag 'application'
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+  %title Spot-A-Tron
+
+  %body
+    #header
+      %h1 Spot-A-Tron
+      %span{:class=>'subtitle'} Get excited
+      %p
+        != flash[:notice]
+    #menu
+      %ul
+        - if logged_in?
+          %li 
+            != link_to 'logout', logout_path
+        -else
+          %li 
+            != link_to 'login', login_path
+          %li
+            != link_to 'register', signup_path
+      
+    #content
+      != yield
+    
+    #latest
+      != render :partial => 'spot/spot', :collection => @spots.reverse
+    
+    #footer
+      %span 
+        This is a 
+        %a{:href => "http://www.veryhappythings.co.uk"} 
+          very happy thing
+        by Mac.

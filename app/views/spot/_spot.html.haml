@@ -1,0 +1,6 @@
+.spot
+  .user= spot.user.login
+  .url
+    %a{:href=>spot.url}= spot.url.length > 55 ? spot.url.slice(0,55).concat('...') : spot.url
+  .created_at
+    %span= spot.created_at
