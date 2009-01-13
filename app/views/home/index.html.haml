@@ -11,14 +11,17 @@
   %p
     Spot-A-Tron was made by
     %a{:href => 'http://www.shrieking.net'} Mac
-    over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on
-    %a{:href=>'http://www.veryhappythings.co.uk'} Very Happy Things
+    over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on&nbsp;
+    %a{:href=>'http://www.veryhappythings.co.uk'}> Very Happy Things
     \.  It is written in 
     %a{:href=>'http://www.rubyonrails.org'} Ruby on Rails 
-    and is forever indebted to the awesomeness of 
-    %a{:href=>'http://haml.hamptoncatlin.com/'} HAML
-    ,
-    %a{:href=>'http://kuler.adobe.com'} Kuler
-    and
-    %a{:href=>'http://www.nigella.com/'} Nigella
+    and is forever indebted to the awesomeness of&nbsp;
+    %a{:href=>'http://haml.hamptoncatlin.com/'}> HAML
+    ,&nbsp;
+    %a{:href=>'http://kuler.adobe.com'}> Kuler
+    &nbsp;and&nbsp;
+    %a{:href=>'http://www.nigella.com/'}> Nigella
     \.
+    
+#latest
+  != render :partial => 'spot/spot', :collection => @spots.reverse

@@ -7,8 +7,9 @@
 
   %body
     #header
-      %h1 Spot-A-Tron
-      %span{:class=>'subtitle'} Get excited
+      %h1 
+        != link_to 'Spot-A-Tron', home_path
+      %span.subtitle Get excited
       %p
         != flash[:notice]
     #menu
@@ -16,6 +17,10 @@
         - if logged_in?
           %li 
             != link_to 'logout', logout_path
+          %li
+            != link_to 'profile', current_user
+          %li
+            != link_to 'new spot',home_path
         -else
           %li 
             != link_to 'login', login_path
@@ -24,9 +29,6 @@
       
     #content
       != yield
-    
-    #latest
-      != render :partial => 'spot/spot', :collection => @spots.reverse
     
     #footer
       %span 

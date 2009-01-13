@@ -1,4 +1,5 @@
 require 'digest/sha1'
+require 'digest/md5'
 class User < ActiveRecord::Base
   # Virtual attribute for the unencrypted password
   attr_accessor :password
@@ -67,6 +68,10 @@ class User < ActiveRecord::Base
   # Returns true if the user has just been activated.
   def recently_activated?
     @activated
+  end
+
+  def gravatar_url
+    'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest(email) + "?s=64"
   end
 
   protected

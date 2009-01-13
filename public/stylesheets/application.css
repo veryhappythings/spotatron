@@ -10,6 +10,11 @@ h1 {
 	padding: 0;
 }
 
+#header h1 a {
+	color: #363305;
+	text-decoration: none;
+}
+
 .subtitle {
 	color: #575423;
 	margin-left: 10px;
@@ -73,9 +78,12 @@ h3 {
 }
 
 .spot .created_at {
-	font-size: 8px;
+	font-size: 10px;
 }
-
+.spot .created_at a {
+	color: #D6CF57;
+	text-decoration: none;
+}
 #footer {
 	font-size:10px;
 	color: #363305;

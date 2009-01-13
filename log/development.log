@@ -1,0 +1,1742 @@
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-26 11:47:38) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001918)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000533)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00434)
+
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of layouts/application.html.haml:
+17:           %li 
+18:             != link_to 'logout', logout_path
+19:           %li
+20:             != link_to 'Profile', user_path
+21:         -else
+22:           %li 
+23:             != link_to 'login', login_path
+
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:379:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:131:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:110:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:88:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:621:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `url_for'
+    (eval):17:in `user_path'
+    app/views/layouts/application.html.haml:20:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:48:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001236)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000361)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+
+ActionView::TemplateError (undefined method `username' for #<User:0x2468b18>) on line #2 of users/show.html.haml:
+1: .user
+2:   %span.username= @user.username
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    app/views/users/show.html.haml:2:in `_run_plugin_47app47views47users47show46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/users_controller.rb:19:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:49:06) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001248)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000381)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000372)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.09740)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00075)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00053)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00049)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00050)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00047)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00047)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00052)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00060)
+Rendered home/_analytics (0.00002)
+Completed in 0.14338 (6 reqs/sec) | Rendering: 0.12664 (88%) | DB: 0.00200 (1%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:49:41) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001286)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000328)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000334)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00229)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+Rendered home/_analytics (0.00002)
+Completed in 0.02548 (39 reqs/sec) | Rendering: 0.00968 (37%) | DB: 0.00195 (7%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-26 11:49:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001536)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000385)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00181)
+
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of layouts/application.html.haml:
+17:           %li 
+18:             != link_to 'logout', logout_path
+19:           %li
+20:             != link_to 'Profile', user_path
+21:         -else
+22:           %li 
+23:             != link_to 'login', login_path
+
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:379:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:131:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:110:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:88:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:621:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `url_for'
+    (eval):17:in `user_path'
+    app/views/layouts/application.html.haml:20:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-26 11:49:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001352)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000347)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00181)
+
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of layouts/application.html.haml:
+17:           %li 
+18:             != link_to 'logout', logout_path
+19:           %li
+20:             != link_to 'Profile', user_path
+21:         -else
+22:           %li 
+23:             != link_to 'login', login_path
+
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:379:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:131:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:110:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:88:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:621:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `url_for'
+    (eval):17:in `user_path'
+    app/views/layouts/application.html.haml:20:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-26 11:49:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001236)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000415)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00194)
+
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of layouts/application.html.haml:
+17:           %li 
+18:             != link_to 'logout', logout_path
+19:           %li
+20:             != link_to 'Profile', user_path
+21:         -else
+22:           %li 
+23:             != link_to 'login', login_path
+
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:379:in `raise_named_route_error'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:339:in `generate'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:131:in `rewrite_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:110:in `rewrite_url'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/url_rewriter.rb:88:in `rewrite'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:621:in `url_for'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/url_helper.rb:71:in `url_for'
+    (eval):17:in `user_path'
+    app/views/layouts/application.html.haml:20:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing HomeController#index (for 127.0.0.1 at 2008-12-26 11:51:24) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001211)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000396)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00196)
+  [4;36;1mUser Load (0.000380)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00226)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00042)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+Rendered home/_analytics (0.00002)
+Completed in 0.03092 (32 reqs/sec) | Rendering: 0.02239 (72%) | DB: 0.00199 (6%) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:51:28) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001241)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000332)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000334)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00212)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00048)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+Rendered home/_analytics (0.00002)
+Completed in 0.02517 (39 reqs/sec) | Rendering: 0.00922 (36%) | DB: 0.00191 (7%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:51:59) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001308)[0m   [0mSELECT * FROM "spots" [0m
+
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1360:in `find_from_ids'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:537:in `find'
+    /app/controllers/users_controller.rb:17:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:52:16) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001267)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000342)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000336)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00219)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00041)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+Rendered home/_analytics (0.00002)
+Completed in 0.02568 (38 reqs/sec) | Rendering: 0.00984 (38%) | DB: 0.00195 (7%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-12-26 11:52:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlOGY1NmRjNTU5YjI5NDhmOWMwNTdhMzRhMzFiYzYy
+MzM6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--1da3b0d0d50a70fc3d1e2c3f93a74195f7cf64dd
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001347)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000345)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000341)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00216)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00039)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00047)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00042)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00041)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00041)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00040)
+Rendered home/_analytics (0.00002)
+Completed in 0.02644 (37 reqs/sec) | Rendering: 0.00966 (36%) | DB: 0.00203 (7%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:10:53) [GET]
+  Session ID: 8c5bb81de37043f9f8182f08a2a613c2
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.002026)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000512)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+ActionView::TemplateError (can't convert nil into String) on line #7 of spot/_spot.html.haml:
+4:     %a{:href=>spot.url}= spot.url.length > 55 ? spot.url.slice(0,55).concat('...') : spot.url
+5:   .created_at
+6:     %span= spot.created_at
+7:     %span= spot.user.gravatar_url
+    app/models/user.rb:74:in `digest'
+    app/models/user.rb:74:in `hexdigest'
+    app/models/user.rb:74:in `gravatar_url'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:177:in `send'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/associations/association_proxy.rb:177:in `method_missing'
+    app/views/spot/_spot.html.haml:7:in `_run_plugin_47app47views47spot47_spot46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:28:in `render_member'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:142:in `render_partial_collection_with_known_partial_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:141:in `map'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:141:in `render_partial_collection_with_known_partial_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:135:in `render_partial_collection'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:271:in `render_without_haml'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers/action_view_mods.rb:5:in `render'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers.rb:57:in `non_haml'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers/action_view_mods.rb:5:in `render'
+    app/views/layouts/application.html.haml:31:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1163:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+  [4;36;1mUser Load (0.000698)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+  [4;35;1mUser Load (0.000439)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+  [4;36;1mUser Load (0.000733)[0m   [0;1mSELECT * FROM "users" LIMIT 1[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:17:08) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001223)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000344)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.01418)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00046)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00046)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00075)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00042)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00040)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00040)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+Rendered home/_analytics (0.00002)
+Completed in 0.03004 (33 reqs/sec) | Rendering: 0.02192 (72%) | DB: 0.00157 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:19:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001382)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000338)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.01382)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00049)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00048)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+Rendered home/_analytics (0.00002)
+Completed in 0.02957 (33 reqs/sec) | Rendering: 0.02056 (69%) | DB: 0.00172 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:21:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001231)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000372)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.08750)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00051)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+Rendered home/_analytics (0.00002)
+Completed in 0.10144 (9 reqs/sec) | Rendering: 0.09333 (92%) | DB: 0.00160 (1%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:21:50) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001280)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000458)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.01418)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00040)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00038)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00037)
+Rendered home/_analytics (0.00002)
+Completed in 0.02876 (34 reqs/sec) | Rendering: 0.02042 (71%) | DB: 0.00174 (6%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:22:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001331)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000353)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.01375)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00050)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00043)
+Rendered home/_analytics (0.00002)
+Completed in 0.02920 (34 reqs/sec) | Rendering: 0.02047 (70%) | DB: 0.00168 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2009-01-09 19:23:30) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--3b5c7eccd9821c68d7f091c53b697684142a6f8d
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mSpot Load (0.001351)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mUser Load (0.000466)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.01938)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00053)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00048)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00125)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00099)
+Rendered home/_analytics (0.00002)
+Completed in 0.05366 (18 reqs/sec) | Rendering: 0.04549 (84%) | DB: 0.00182 (3%) | 200 OK [http://127.0.0.1/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2009-01-09 19:23:35) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--a3de294b0cfa4566d25770c3ba9780927f8bbd91
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"a7949b8d5b8d7f38201e6afd7f3e90a477de0d94", "action"=>"create", "controller"=>"sessions", "password"=>"martin", "login"=>"mac"}
+  [4;36;1mSpot Load (0.001266)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000384)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'mac') LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/
+Completed in 0.10399 (9 reqs/sec) | DB: 0.00165 (1%) | 302 Found [http://127.0.0.1/session]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-09 19:23:35) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlG--73d958275004586622217b35736012536891be0f
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001318)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000367)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00196)
+  [4;36;1mUser Load (0.000352)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00265)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00053)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00045)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00044)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00050)
+Rendered home/_analytics (0.00002)
+Completed in 0.03458 (28 reqs/sec) | Rendering: 0.02506 (72%) | DB: 0.00204 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:23:46) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBp
+biBzdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--180051d72eb54d01c0a584d18e127af41b79ae7b
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001382)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000396)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000508)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00308)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00065)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00054)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00052)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00050)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00052)
+Rendered home/_analytics (0.00002)
+Completed in 0.03926 (25 reqs/sec) | Rendering: 0.01973 (50%) | DB: 0.00229 (5%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:30:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001216)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000335)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000338)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+
+
+ActionView::TemplateError (undefined local variable or method `by' for #<ActionView::Base:0x229fa84>) on line #8 of spot/_spot.html.haml:
+5:     %a{:href=>spot.url}= spot.url.length > 55 ? spot.url.slice(0,55).concat('...') : spot.url
+6:   .created_at
+7:     %span= spot.created_at
+8:     %span= by
+9:     != link_to spot.user.login, spot.user
+    app/views/spot/_spot.html.haml:8:in `_run_plugin_47app47views47spot47_spot46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:20:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:19:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partial_template.rb:28:in `render_member'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:142:in `render_partial_collection_with_known_partial_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:141:in `map'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:141:in `render_partial_collection_with_known_partial_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/partials.rb:135:in `render_partial_collection'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:271:in `render_without_haml'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers/action_view_mods.rb:5:in `render'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers.rb:57:in `non_haml'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/haml/helpers/action_view_mods.rb:5:in `render'
+    app/views/layouts/application.html.haml:31:in `_run_plugin_47app47views47layouts47application46html46haml'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `call'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/users_controller.rb:19:in `show'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `sass_old_process'
+    /Library/Ruby/Gems/1.8/gems/haml-2.0.3/lib/sass/plugin/rails.rb:19:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:31:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001237)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000342)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000343)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00265)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00064)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00058)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+Rendered home/_analytics (0.00002)
+Completed in 0.03131 (31 reqs/sec) | Rendering: 0.01311 (41%) | DB: 0.00192 (6%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:33:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001257)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000349)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000345)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00235)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00058)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00054)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00054)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+Rendered home/_analytics (0.00002)
+Completed in 0.02994 (33 reqs/sec) | Rendering: 0.01093 (36%) | DB: 0.00195 (6%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:33:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001214)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000335)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000336)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00234)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00066)
+Rendered home/_analytics (0.00002)
+Completed in 0.02984 (33 reqs/sec) | Rendering: 0.01149 (38%) | DB: 0.00188 (6%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-09 19:33:52) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001235)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000337)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000332)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00254)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00064)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00054)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+Rendered home/_analytics (0.00002)
+Completed in 0.02947 (33 reqs/sec) | Rendering: 0.01124 (38%) | DB: 0.00190 (6%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-10 11:45:37) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001768)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000384)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000352)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00253)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00108)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00064)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00070)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.08047)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+Rendered home/_analytics (0.00002)
+Completed in 0.21812 (4 reqs/sec) | Rendering: 0.09356 (42%) | DB: 0.00250 (1%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-10 11:45:53) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001235)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000346)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mUser Load (0.000408)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00246)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00071)
+Rendered home/_analytics (0.00002)
+Completed in 0.03185 (31 reqs/sec) | Rendering: 0.01248 (39%) | DB: 0.00199 (6%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-10 11:46:31) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mSpot Load (0.001220)[0m   [0mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.000364)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00187)
+  [4;35;1mUser Load (0.000352)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00237)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00067)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+Rendered home/_analytics (0.00002)
+Completed in 0.03190 (31 reqs/sec) | Rendering: 0.02312 (72%) | DB: 0.00194 (6%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-10 11:48:02) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001230)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000359)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00209)
+  [4;36;1mUser Load (0.000413)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00264)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00067)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00060)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+Rendered home/_analytics (0.00002)
+Completed in 0.03601 (27 reqs/sec) | Rendering: 0.02685 (74%) | DB: 0.00200 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-10 11:49:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mSpot Load (0.001252)[0m   [0mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.000375)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00207)
+  [4;35;1mUser Load (0.000411)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00275)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00063)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00058)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00064)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00060)
+Rendered home/_analytics (0.00002)
+Completed in 0.11120 (8 reqs/sec) | Rendering: 0.10242 (92%) | DB: 0.00204 (1%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-10 11:51:22) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;36;1mSpot Load (0.001288)[0m   [0;1mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;35;1mUser Load (0.000422)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00181)
+  [4;36;1mUser Load (0.000348)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00247)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00065)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00058)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+Rendered home/_analytics (0.00002)
+Completed in 0.03478 (28 reqs/sec) | Rendering: 0.02608 (74%) | DB: 0.00206 (5%) | 200 OK [http://127.0.0.1/]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-13 20:04:00) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mSpot Load (0.064931)[0m   [0mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.002657)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.03568)
+  [4;35;1mUser Load (0.017681)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.12343)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00131)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00136)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00123)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00132)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00101)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00131)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00178)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00085)
+Rendered home/_analytics (0.00012)
+Completed in 0.87870 (1 reqs/sec) | Rendering: 0.49492 (56%) | DB: 0.08527 (9%) | 200 OK [http://127.0.0.1/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-13 20:04:14) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001303)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000371)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000400)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/_analytics (0.00002)
+Completed in 0.02301 (43 reqs/sec) | Rendering: 0.00351 (15%) | DB: 0.00207 (9%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-13 20:09:05) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001515)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mSpot Load (0.000446)[0m   [0;1mSELECT * FROM "spots" WHERE (user_id = '--- :id
+') [0m
+  [4;35;1mUser Load (0.000422)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mUser Load (0.000359)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/_analytics (0.00002)
+Completed in 0.32731 (3 reqs/sec) | Rendering: 0.00478 (1%) | DB: 0.00274 (0%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-13 20:09:54) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mSpot Load (0.001264)[0m   [0mSELECT * FROM "spots" [0m
+  [4;36;1mUser Load (0.000346)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mSpot Load (0.000950)[0m   [0mSELECT * FROM "spots" WHERE (user_id = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00265)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00060)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00058)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00061)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mUser Load (0.000585)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/_analytics (0.00002)
+Completed in 0.03330 (30 reqs/sec) | Rendering: 0.01221 (36%) | DB: 0.00315 (9%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2009-01-13 20:10:06) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mSpot Load (0.001263)[0m   [0;1mSELECT * FROM "spots" [0m
+  [4;35;1mUser Load (0.000352)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mSpot Load (0.000982)[0m   [0;1mSELECT * FROM "spots" WHERE (user_id = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00251)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00064)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00102)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00060)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00056)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00054)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00055)
+  [4;36;1mUser Load (0.000369)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/_analytics (0.00002)
+Completed in 0.03196 (31 reqs/sec) | Rendering: 0.01186 (37%) | DB: 0.00297 (9%) | 200 OK [http://127.0.0.1/users/1]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-01-13 20:10:09) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlZTA0ZDQwZjA1NTU4ODFhMDdlNDZlNTk2Nzc2MjU3
+YmQ6DHVzZXJfaWRpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29u
+dHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--2a1a0739ee606df00f4e6a9ef5a47490f12ea8e5
+  Parameters: {"action"=>"index", "controller"=>"home"}
+  [4;35;1mSpot Load (0.001304)[0m   [0mSELECT * FROM "spots" [0m
+Rendering template within layouts/application
+Rendering home/index
+  [4;36;1mUser Load (0.000368)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered spot/_new (0.00205)
+  [4;35;1mUser Load (0.000359)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00261)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00075)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00062)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00070)
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00057)
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered spot/_spot (0.00059)
+Rendered home/_analytics (0.00002)
+Completed in 0.11228 (8 reqs/sec) | Rendering: 0.02461 (21%) | DB: 0.00203 (1%) | 200 OK [http://127.0.0.1/]
