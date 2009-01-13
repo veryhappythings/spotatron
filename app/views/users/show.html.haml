@@ -1,10 +1,17 @@
 .user
   %img{:src=>@user.gravatar_url}
+  - if @user == current_user
+    %p This is you!
+  - elsif @user.followed?
+    %p Followed
+  - else
+    %p Follow?
   %p.username= @user.login
-  %p 
-    if you want an avatar, sign up at 
-    %a{:href=>'http://www.gravatar.com'} Gravatar
-    with the email address you used here.
+  - if @user==current_user
+    %p 
+      if you want an avatar, sign up at 
+      %a{:href=>'http://www.gravatar.com'} Gravatar
+      with the email address you used here.
     
 #latest
   != render :partial => 'spot/spot', :collection => @spots.reverse

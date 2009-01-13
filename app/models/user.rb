@@ -74,6 +74,10 @@ class User < ActiveRecord::Base
     'http://www.gravatar.com/avatar/' + Digest::MD5.hexdigest(email) + "?s=64"
   end
 
+  def followed?
+    true
+  end
+
   protected
     # before filter 
     def encrypt_password
