@@ -75,7 +75,7 @@ class User < ActiveRecord::Base
   end
 
   def followed?
-    true
+    false
   end
 
   protected

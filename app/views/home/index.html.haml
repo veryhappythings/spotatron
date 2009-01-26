@@ -1,27 +1,20 @@
 - if logged_in?
   != render :partial => 'spot/new', :object => @spot
 - else
-  %p 
-    Spot-A-Tron is a Twitter clone designed solely for posting 
-    %a{:href=>'http://www.spotify.com'} Spotify
-    URLs and sharing them with your friends, so it's easy to tell your friends what you're listening to.
+  %p
+    :textile
+      Spot-A-Tron is a Twitter clone designed solely for posting "Spotify":http://www.spotify.com URLs and sharing them with your friends, so it's easy to tell your friends what you're listening to.
   %p
     Planned features for Spot-A-Tron include specific user feeds, the ability to follow people (like Twitter),
     Twitter integration, and whatever else I can be bothered to do.
   %p
-    Spot-A-Tron was made by
-    %a{:href => 'http://www.shrieking.net'} Mac
-    over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on&nbsp;
-    %a{:href=>'http://www.veryhappythings.co.uk'}> Very Happy Things
-    \.  It is written in 
-    %a{:href=>'http://www.rubyonrails.org'} Ruby on Rails 
-    and is forever indebted to the awesomeness of&nbsp;
-    %a{:href=>'http://haml.hamptoncatlin.com/'}> HAML
-    ,&nbsp;
-    %a{:href=>'http://kuler.adobe.com'}> Kuler
-    &nbsp;and&nbsp;
-    %a{:href=>'http://www.nigella.com/'}> Nigella
-    \.
+    :plain
+      Spot-A-Tron was made by #{link_to 'Mac', 'http://www.shrieking.net'} over Christmas 2008 in a buck's fizz
+      fueled frenzy, and is the first thing to appear on
+      #{link_to 'Very Happy Things', 'http://www.veryhappythings.co.uk'}.  It is written in
+      #{link_to 'Ruby on Rails', 'http://www.rubyonrails.org'} and is forever indebted to the awesomeness of
+      #{link_to 'HAML', 'http://haml.hamptoncatlin.com/'}, #{link_to 'Kuler', 'http://kuler.adobe.com'} and
+      #{link_to 'Nigella','http://www.nigella.com/'}.
     
 #latest
   != render :partial => 'spot/spot', :collection => @spots.reverse

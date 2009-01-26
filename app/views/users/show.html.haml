@@ -6,7 +6,7 @@
     %p Followed
   - else
     %p Follow?
-  %p.username= @user.login
+  %p.username== Username: #{@user.login}
   - if @user==current_user
     %p 
       if you want an avatar, sign up at 
