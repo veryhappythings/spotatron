@@ -2,10 +2,6 @@
   %img{:src=>@user.gravatar_url}
   - if @user == current_user
     %p This is you!
-  - elsif @user.followed?
-    %p Followed
-  - else
-    %p Follow?
   %p.username== Username: #{@user.login}
   - if @user==current_user
     %p 
