@@ -73,7 +73,8 @@ h3 {
 .spot .url {
 }
 
-.spot .url a {
+.spot .url a,
+.spot .uri a {
 	color: #D6CF57;
 }
 
