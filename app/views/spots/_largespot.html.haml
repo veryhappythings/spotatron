@@ -1,0 +1,11 @@
+.spot.largespot
+  .user
+    %img{:src=>largespot.user.gravatar_url, :title=>largespot.user.login}
+  .url
+    %a{:href=>largespot.url}= largespot.url.length > 55 ? largespot.url.slice(0,55).concat('...') : largespot.url
+  .created_at
+    %span== #{link_to largespot.created_at, largespot}
+    %span== by #{link_to largespot.user.login, largespot.user}
+  - if largespot.user == current_user
+    .controls
+      != link_to 'delete', largespot, :confirm => 'Are you sure?', :method => :delete

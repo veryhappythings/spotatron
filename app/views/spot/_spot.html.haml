@@ -1,0 +1,11 @@
+.spot
+  .user
+    %img{:src=>spot.user.gravatar_url, :title=>spot.user.login}
+  .url
+    %a{:href=>spot.url}= spot.url.length > 55 ? spot.url.slice(0,55).concat('...') : spot.url
+  .uri
+    %a{:href=>spot.uri}= spot.uri.length > 55 ? spot.uri.slice(0,55).concat('...') : spot.uri
+  .created_at
+    %span= spot.created_at
+    %span by
+    != link_to spot.user.login, spot.user
