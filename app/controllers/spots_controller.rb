@@ -1,4 +1,12 @@
 class SpotsController < ApplicationController
+  def show
+    @spot = Spot.find(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
+  end
+  
   # POST /spots
   # POST /spots.xml
   def create
@@ -17,4 +25,12 @@ class SpotsController < ApplicationController
       redirect_back_or_default('/')
     end
   end
+  
+  def destroy
+    @spot = Spot.find(params[:id])
+    @spot.destroy
+
+    redirect_back_or_default('/')
+  end
+  
 end

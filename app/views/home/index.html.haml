@@ -1,5 +1,5 @@
 - if logged_in?
-  != render :partial => 'spot/new', :object => @spot
+  != render :partial => 'spots/new', :object => @spot
 - else
   %p
     :textile
@@ -9,7 +9,7 @@
     Twitter integration, and whatever else I can be bothered to do.
   %p
     :textile
-      Spot-A-Tron was made by "Mac":'http://www.shrieking.net' over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on "Very Happy Things":http://www.veryhappythings.co.uk.  It is written in "Ruby on Rails":http://www.rubyonrails.org and is forever indebted to the awesomeness of "HAML":http://haml.hamptoncatlin.com/, "Kuler":http://kuler.adobe.com and "Nigella":http://www.nigella.com/.
+      Spot-A-Tron was made by "Mac":'http://www.shrieking.net over Christmas 2008 in a buck's fizz fueled frenzy, and is the first thing to appear on "Very Happy Things":http://www.veryhappythings.co.uk.  It is written in "Ruby on Rails":http://www.rubyonrails.org and is forever indebted to the awesomeness of "HAML":http://haml.hamptoncatlin.com/, "Kuler":http://kuler.adobe.com and "Nigella":http://www.nigella.com/.
     
 #latest
-  != render :partial => 'spot/spot', :collection => @spots.reverse
+  != render :partial => 'spots/spot', :collection => @spots.reverse

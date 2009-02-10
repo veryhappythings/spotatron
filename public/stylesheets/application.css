@@ -54,6 +54,14 @@ h3 {
 	width: 700px;
 }
 
+.largespot {
+	background: #565423;
+	color: #D6CF57;
+	font-size:20px;
+	
+	width: 700px;
+}
+
 .spot {
 	height:64px;
 	padding-bottom: 10px;
@@ -84,6 +92,12 @@ h3 {
 	color: #D6CF57;
 	text-decoration: none;
 }
+
+.controls a {
+	color: #D6CF57;
+	text-decoration: none;
+}
+
 #footer {
 	font-size:10px;
 	color: #363305;
