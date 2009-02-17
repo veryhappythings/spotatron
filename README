@@ -1,3 +1,31 @@
 Spot-A-Tron
 A Twitter clone for spotify URLs by Mac (http://www.shrieking.net)
 
+I started this project to learn about Rails and git.  It's been fun so far.  I intend to continue it for as long as it remains fun.
+
+Changelog
+---------
+
+0.2
+-----
+user page
+User pictures (use gravatar?)
+Use textile
+
+1.0
+-----
+view a single spot
+Delete a spot
+Use Spotify URLs rather than HTTP.
+
+Planned features
+----------------
+Follow users
+Homepage shows followers
+Show spotify URLs, not just HTTP urls
+Move style to sass
+get link info from spotify (like listiply.com)
+differentiate playlists/songs
+Twitter integration (starling workling rufus-scheduler)
+OpenId login
+mislav-will_paginate

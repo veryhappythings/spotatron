@@ -15,9 +15,11 @@ class SpotsController < ApplicationController
       redirect_back_or_default('/')
       return
     end
-    
+    params[:spot][:url].gsub!('spotify:','http://open.spotify.com/')
+    params[:spot][:url].gsub!(/:([^\/])/,'/\1')
     @spot = Spot.new(params[:spot])
     @spot.user_id = current_user.id
+
     if @spot.save
       flash[:notice] = 'spot was successfully created.'
       redirect_back_or_default('/')
