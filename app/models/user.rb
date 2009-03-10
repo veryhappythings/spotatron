@@ -5,6 +5,18 @@ class User < ActiveRecord::Base
   attr_accessor :password
 
   has_many :spots
+  
+  has_many :friendships
+  has_many :friends, :through => :friendships
+
+  has_many :following, :class_name => Friendship.to_s, :foreign_key => :friend_id
+  has_many :followers, :through => :following, :source => :user
+  
+  # has_many :friendships
+  # has_many :friends, :through => :friendships
+  # 
+  # has_many :following, :foreign_key => :friend_id, :class_name => Friendship.to_s
+  # has_many :followers, :through => :following, :source => :friendship
 
   validates_presence_of     :login, :email
   validates_presence_of     :password,                   :if => :password_required?
@@ -76,6 +88,10 @@ class User < ActiveRecord::Base
 
   def followed?
     false
+  end
+
+  def follow!(id)
+    self.friends << User.find_by_id(id)
   end
 
   protected

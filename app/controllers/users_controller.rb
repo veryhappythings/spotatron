@@ -39,4 +39,8 @@ class UsersController < ApplicationController
     end
   end
 
+  def follow
+    current_user.follow! params[:id]
+  end
+
 end

@@ -15,6 +15,10 @@ class SpotsController < ApplicationController
       redirect_back_or_default('/')
       return
     end
+    #spotify_uri = params[:spot][:url].split(':')
+    #spotify_uri[0] = 'http://open.spotify.com'
+    #spotify_uri.join('/')
+    
     params[:spot][:url].gsub!('spotify:','http://open.spotify.com/')
     params[:spot][:url].gsub!(/:([^\/])/,'/\1')
     @spot = Spot.new(params[:spot])

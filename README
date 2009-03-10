@@ -3,6 +3,9 @@ A Twitter clone for spotify URLs by Mac (http://www.shrieking.net)
 
 I started this project to learn about Rails and git.  It's been fun so far.  I intend to continue it for as long as it remains fun.
 
+Acknowledgements:
+Marcus (mcobden) - Implemented Spotify URIs
+
 Changelog
 ---------
 
@@ -16,7 +19,7 @@ Use textile
 -----
 view a single spot
 Delete a spot
-Use Spotify URLs rather than HTTP.
+Use Spotify URIs rather than HTTP.
 
 Planned features
 ----------------
