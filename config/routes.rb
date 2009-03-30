@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.home '', :controller => 'home', :action => 'index'
 
-  map.userprofile '/user/:login', :controller => 'users', :action => 'show'
+  map.user_profile '/user/:login', :controller => 'users', :action => 'show'
   map.resources :users
   map.resource  :session
   map.resources :spots

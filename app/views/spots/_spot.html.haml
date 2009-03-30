@@ -8,4 +8,4 @@
   .created_at
     %span== #{link_to spot.created_at, spot}
     %span by
-    != link_to spot.user.login, spot.user
+    != link_to spot.user.login, user_profile_path(:login => spot.user.login)

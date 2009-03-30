@@ -16,7 +16,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_id(params[:id])
     if @user == nil
-      @user = User.find_by_login(params[:id])
+      @user = User.find_by_login(params[:login])
     end
     @spots = Spot.find(:all, :conditions => ["user_id = ?", @user.id])
     if current_user.friends.include? @user

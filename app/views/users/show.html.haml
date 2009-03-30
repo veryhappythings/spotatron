@@ -20,6 +20,6 @@
   %p
     Following:
     - @user.friends.each do |friend|
-      != link_to friend.login, friend
+      != link_to friend.login, user_profile_path(:login => friend.login)
 #latest
   != render :partial => 'spots/spot', :collection => @spots.reverse

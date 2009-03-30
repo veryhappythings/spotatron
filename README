@@ -22,14 +22,13 @@ Delete a spot
 Use Spotify URIs rather than HTTP.
 Follow users
 Homepage shows followers
+correct URL to user page (e.g. spotatron.com/puresock)
 
 Planned features
 ----------------
-Follow users
 Move style to sass
 get link info from spotify (like listiply.com)
 differentiate playlists/songs
 Twitter integration (starling workling rufus-scheduler)
 OpenId login
 paginate: mislav-will_paginate
-correct URL to user page (e.g. spotatron.com/puresock)
