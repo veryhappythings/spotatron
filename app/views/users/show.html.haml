@@ -17,6 +17,9 @@
       if you want an avatar, sign up at 
       %a{:href=>'http://www.gravatar.com'} Gravatar
       with the email address you used here.
-    
+  %p
+    Following:
+    - @user.friends.each do |friend|
+      != link_to friend.login, friend
 #latest
   != render :partial => 'spots/spot', :collection => @spots.reverse
