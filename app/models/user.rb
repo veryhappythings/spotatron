@@ -90,10 +90,6 @@ class User < ActiveRecord::Base
     false
   end
 
-  def follow!(id)
-    self.friends << User.find_by_id(id)
-  end
-
   protected
     # before filter 
     def encrypt_password
@@ -105,6 +101,4 @@ class User < ActiveRecord::Base
     def password_required?
       crypted_password.blank? || !password.blank?
     end
-    
-    
 end

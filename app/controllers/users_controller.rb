@@ -14,9 +14,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.find_by_id(params[:id])
+    if @user == nil
+      @user = User.find_by_login(params[:id])
+    end
     @spots = Spot.find(:all, :conditions => ["user_id = ?", @user.id])
-
+    if current_user.friends.include? @user
+      @friendship = Friendship.find(:first, :conditions => "user_id = #{current_user.id} AND friend_id = #{@user.id}")
+    else
+      @friendship = Friendship.new
+    end
+    
     respond_to do |format|
       format.html # show.html.erb
     end
@@ -38,9 +46,4 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
-
-  def follow
-    current_user.follow! params[:id]
-  end
-
 end

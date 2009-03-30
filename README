@@ -20,15 +20,16 @@ Use textile
 view a single spot
 Delete a spot
 Use Spotify URIs rather than HTTP.
+Follow users
+Homepage shows followers
 
 Planned features
 ----------------
 Follow users
-Homepage shows followers
-Show spotify URLs, not just HTTP urls
 Move style to sass
 get link info from spotify (like listiply.com)
 differentiate playlists/songs
 Twitter integration (starling workling rufus-scheduler)
 OpenId login
-mislav-will_paginate
+paginate: mislav-will_paginate
+correct URL to user page (e.g. spotatron.com/puresock)
