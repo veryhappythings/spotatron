@@ -3,14 +3,16 @@
   - if @user == current_user
     %p This is you!
   - else
-    - if !current_user.friends.include? @user
-      - form_for @friendship do |f|
-        != hidden_field :user, :id
-        != submit_tag 'Follow'
-    - else
-      - form_for @friendship, :html => {:method => 'delete'} do |f|
-        != hidden_field :user, :id
-        != submit_tag 'Unfollow'
+    - if logged_in?
+      - if !current_user.friends.include?(@user)
+        - form_for @friendship do |f|
+          != hidden_field :user, :id
+          != submit_tag 'Follow'
+      - else
+        - form_for @friendship, :html => {:method => 'delete'} do |f|
+          != hidden_field :user, :id
+          != submit_tag 'Unfollow'
+    
   %p.username== Username: #{@user.login}
   - if @user==current_user
     %p 

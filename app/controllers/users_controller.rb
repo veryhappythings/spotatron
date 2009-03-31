@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       @user = User.find_by_login(params[:login])
     end
     @spots = Spot.find(:all, :conditions => ["user_id = ?", @user.id])
-    if current_user.friends.include? @user
+    if logged_in? && current_user.friends.include?(@user)
       @friendship = Friendship.find(:first, :conditions => "user_id = #{current_user.id} AND friend_id = #{@user.id}")
     else
       @friendship = Friendship.new
