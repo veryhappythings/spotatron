@@ -6,29 +6,7 @@ I started this project to learn about Rails and git.  It's been fun so far.  I i
 Acknowledgements:
 Marcus (mcobden) - Implemented Spotify URIs
 
-Changelog
----------
-
-0.2
------
-user page
-User pictures (use gravatar?)
-Use textile
-
-1.0
------
-view a single spot
-Delete a spot
-Use Spotify URIs rather than HTTP.
-Follow users
-Homepage shows followers
-correct URL to user page (e.g. spotatron.com/puresock)
-
-Planned features
-----------------
-Move style to sass
-get link info from spotify (like listiply.com)
-differentiate playlists/songs
-Twitter integration (starling workling rufus-scheduler)
-OpenId login
-paginate: mislav-will_paginate
+Requirements:
+haml
+redcloth
+rails 2.3
