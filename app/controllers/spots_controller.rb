@@ -39,4 +39,9 @@ class SpotsController < ApplicationController
     redirect_back_or_default('/')
   end
   
+  def update
+    @spot = Spot.find(params[:id])
+    # FIXME: Update tags
+  end
+  
 end
