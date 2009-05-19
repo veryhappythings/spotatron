@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resource  :session
   map.resources :spots
   map.resources :friendships, :member => {:delete => :post}
+  map.friends '/friends', :controller => 'friends', :action =>'show'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login  '/login', :controller => 'sessions', :action => 'new'
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'

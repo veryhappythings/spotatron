@@ -13,11 +13,7 @@ class ApplicationController < ActionController::Base
   
   private
     def get_info
-      if logged_in?
-        @spots = current_user.friends.inject([]) { |spots, f| spots.concat f.spots }.concat current_user.spots
-      else
         @spots = Spot.find(:all)
-      end
     end
   
   # See ActionController::Base for details 

@@ -7,7 +7,7 @@
 
   %body
     #header
-      %h1 
+      %h1
         != link_to 'Spot-A-Tron', home_path
       %span.subtitle Get excited
       %p
@@ -15,26 +15,28 @@
     #menu
       %ul
         - if logged_in?
-          %li 
+          %li
             != link_to 'logout', logout_path
           %li
             != link_to 'profile', current_user
           %li
-            != link_to 'new spot',home_path
+            != link_to 'new spot', home_path
+          %li
+            != link_to 'friends', friends_path
         -else
-          %li 
+          %li
             != link_to 'login', login_path
           %li
             != link_to 'register', signup_path
-      
+
     #content
       != yield
-    
+
     #footer
-      %span 
-        This is a 
-        %a{:href => "http://www.veryhappythings.co.uk"} 
+      %span
+        This is a
+        %a{:href => "http://www.veryhappythings.co.uk"}
           very happy thing
         by Mac.
-        
-    != render :partial => 'home/analytics'
+    - if RAILS_ENV == 'production'
+      != render :partial => 'home/analytics'
