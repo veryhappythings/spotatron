@@ -32,6 +32,17 @@ class SpotsController < ApplicationController
     @spot = Spot.new(params[:spot])
     @spot.user_id = current_user.id
 
+    case @spot.url
+      when /track/
+        @spot.tag_list << 'track'
+      when /album/
+        @spot.tag_list << 'album'
+      when /artist/
+        @spot.tag_list << 'artist'
+      when /playlist/
+        @spot.tag_list << 'playlist'
+    end
+    
     if @spot.save
       flash[:notice] = 'spot was successfully created.'
       redirect_back_or_default('/')
