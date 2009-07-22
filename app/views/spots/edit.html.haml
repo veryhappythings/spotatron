@@ -1,6 +1,4 @@
-%h2 New Spot
-!= error_messages_for 'spot'
-- form_for new do |f|
+- form_for @spot do |f|
   != f.text_field :url
   != f.text_field :tag_list
   != submit_tag('Submit')

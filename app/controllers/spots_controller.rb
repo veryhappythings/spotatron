@@ -1,4 +1,12 @@
 class SpotsController < ApplicationController
+  def index
+    if params[:search]
+      @spots = Spot.find_tagged_with(params[:search], :on => :tags, :order => nil)
+    else
+      @spots = []
+    end
+  end
+  
   def show
     @spot = Spot.find(params[:id])
 
@@ -38,10 +46,22 @@ class SpotsController < ApplicationController
 
     redirect_back_or_default('/')
   end
+
+  def edit
+    @spot = Spot.find(params[:id])
+  end
   
   def update
     @spot = Spot.find(params[:id])
-    # FIXME: Update tags
+
+    respond_to do |format|
+      if @spot.update_attributes(params[:spot])
+        flash[:notice] = 'Spot was successfully updated.'
+        format.html { redirect_to(@spot) }
+      else
+        format.html { render :action => "edit" }
+        format.xml  { render :xml => @spot.errors, :status => :unprocessable_entity }
+      end
+    end
   end
-  
 end
