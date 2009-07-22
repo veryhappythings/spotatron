@@ -14,6 +14,13 @@ class ApplicationController < ActionController::Base
   private
     def get_info
         @spots = Spot.find(:all)
+        if logged_in?
+          # TODO : make User a tagger and get the tags that the user makes.
+          @tags = Spot.find(:all, :conditions => ["user_id = ?", current_user.id]).map {|spot| spot.tag_list}.flatten!
+          @tags = @tags.uniq - [current_user.login]
+        else
+          @tags = []
+        end
     end
   
   # See ActionController::Base for details 

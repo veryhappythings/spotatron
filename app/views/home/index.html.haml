@@ -15,6 +15,12 @@
   != text_field_tag :search, params[:search]
   != submit_tag 'Search', :name => nil
 
+%h2 Your Tags
+%ul
+  - @tags.each do |tag|
+    %li
+      != link_to tag, "/spots?search=#{tag}"
+
 %h2 Public Timeline
 #spot_list
   != render :partial => 'spots/spot', :collection => @spots.reverse

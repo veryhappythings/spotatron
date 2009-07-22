@@ -1,7 +1,7 @@
 class SpotsController < ApplicationController
   def index
     if params[:search]
-      @spots = Spot.find_tagged_with(params[:search], :on => :tags, :order => nil)
+      @spots = Spot.tagged_with(params[:search], :on => :tags, :order => nil)
     else
       @spots = []
     end
