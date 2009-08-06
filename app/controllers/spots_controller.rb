@@ -1,12 +1,14 @@
 class SpotsController < ApplicationController
   def index
     if params[:search]
-      @spots = Spot.tagged_with(params[:search], :on => :tags, :order => nil)
+      #@spots = Spot.tagged_with(params[:search], :on => :tags)
+      #logger.info(Spot.find_all_by_user_id(@current_user.id).map {|spot| spot.user.login})
+      @spots = Spot.find_all_by_user_id(@current_user.id).reject! {|spot| !spot.tag_list.include? params[:search]}
     else
       @spots = []
     end
   end
-  
+
   def show
     @spot = Spot.find(params[:id])
 
@@ -14,7 +16,7 @@ class SpotsController < ApplicationController
       format.html
     end
   end
-  
+
   # POST /spots
   # POST /spots.xml
   def create
@@ -26,7 +28,7 @@ class SpotsController < ApplicationController
     #spotify_uri = params[:spot][:url].split(':')
     #spotify_uri[0] = 'http://open.spotify.com'
     #spotify_uri.join('/')
-    
+
     params[:spot][:url].gsub!('spotify:','http://open.spotify.com/')
     params[:spot][:url].gsub!(/:([^\/])/,'/\1')
     @spot = Spot.new(params[:spot])
@@ -42,7 +44,9 @@ class SpotsController < ApplicationController
       when /playlist/
         @spot.tag_list << 'playlist'
     end
-    
+
+    @current_user.tag(@spot, :with => @spot.tag_list, :on => :tags)
+
     if @spot.save
       flash[:notice] = 'spot was successfully created.'
       redirect_back_or_default('/')
@@ -50,7 +54,7 @@ class SpotsController < ApplicationController
       redirect_back_or_default('/')
     end
   end
-  
+
   def destroy
     @spot = Spot.find(params[:id])
     @spot.destroy
@@ -61,7 +65,7 @@ class SpotsController < ApplicationController
   def edit
     @spot = Spot.find(params[:id])
   end
-  
+
   def update
     @spot = Spot.find(params[:id])
 

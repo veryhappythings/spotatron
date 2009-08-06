@@ -15,7 +15,7 @@ two:
   user: quentin
   url: http://open.spotify.com/track/1ctxneSxVsNBxE1OqvrK6o
   created_at: <%= 5.days.ago.to_s :db %>
-  
+
 three:
   user: aaron
   url: http://open.spotify.com/track/6m5D7zGVbzAxceDXQTsRSX
@@ -25,7 +25,7 @@ four:
   user: aaron
   url: http://open.spotify.com/track/1OFhh3lMqkhh1XoEBy5dFz
   created_at: <%= 3.days.ago.to_s :db %>
-  
+
 five:
   user: mac
   url: http://open.spotify.com/track/1XGkv56yztms2CbhTcfK0G
