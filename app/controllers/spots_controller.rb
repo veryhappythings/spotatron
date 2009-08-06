@@ -1,8 +1,8 @@
 class SpotsController < ApplicationController
   def index
     if params[:search]
-      #@spots = Spot.tagged_with(params[:search], :on => :tags)
-      #logger.info(Spot.find_all_by_user_id(@current_user.id).map {|spot| spot.user.login})
+      # This line searches all spots
+      #@spots = Spot.tagged_with(params[:search], :on => :tags
       @spots = Spot.find_all_by_user_id(@current_user.id).reject! {|spot| !spot.tag_list.include? params[:search]}
     else
       @spots = []
