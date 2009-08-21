@@ -1,9 +1,11 @@
 class SpotsController < ApplicationController
   def index
     if params[:search]
-      # This line searches all spots
-      #@spots = Spot.tagged_with(params[:search], :on => :tags
-      @spots = Spot.find_all_by_user_id(@current_user.id).reject! {|spot| !spot.tag_list.include? params[:search]}
+      if params[:mine]
+        @spots = Spot.find_all_by_user_id(@current_user.id).reject! {|spot| !spot.tag_list.include? params[:search]}
+      else
+        @spots = Spot.tagged_with(params[:search], :on => :tags)
+      end
     else
       @spots = []
     end
@@ -43,6 +45,8 @@ class SpotsController < ApplicationController
         @spot.tag_list << 'artist'
       when /playlist/
         @spot.tag_list << 'playlist'
+      when /search/
+        @spot.tag_list << 'search'
     end
 
     @current_user.tag(@spot, :with => @spot.tag_list, :on => :tags)
