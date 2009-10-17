@@ -28,6 +28,8 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem "RedCloth",:lib => "redcloth"
   config.gem "mbleigh-acts-as-taggable-on", :source => 'http://gems.github.com', :lib => "acts-as-taggable-on"
+  #config.gem "thoughtbot-factory_girl", :lib => "factory_girl", :source => "http://gems.github.com"
+  config.gem "will_paginate"
 
   # Only load the plugins named here, in the order given. By default, all plugins
   # in vendor/plugins are loaded in alphabetical order.

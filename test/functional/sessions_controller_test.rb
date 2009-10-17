@@ -4,7 +4,7 @@ require 'sessions_controller'
 # Re-raise errors caught by the controller.
 class SessionsController; def rescue_action(e) raise e end; end
 
-class SessionsControllerTest < Test::Unit::TestCase
+class SessionsControllerTest < ActionController::TestCase
   # Be sure to include AuthenticatedTestHelper in test/test_helper.rb instead
   # Then, you can remove it from this and the units test.
   include AuthenticatedTestHelper
@@ -45,11 +45,11 @@ class SessionsControllerTest < Test::Unit::TestCase
     post :create, :login => 'quentin', :password => 'test', :remember_me => "0"
     assert_nil @response.cookies["auth_token"]
   end
-  
+
   def test_should_delete_token_on_logout
     login_as :quentin
     get :destroy
-    assert_equal @response.cookies["auth_token"], []
+    assert_equal @response.cookies["auth_token"], nil
   end
 
   def test_should_login_with_cookie
@@ -78,7 +78,7 @@ class SessionsControllerTest < Test::Unit::TestCase
     def auth_token(token)
       CGI::Cookie.new('name' => 'auth_token', 'value' => token)
     end
-    
+
     def cookie_for(user)
       auth_token users(user).remember_token
     end
