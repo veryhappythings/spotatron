@@ -12,11 +12,11 @@
         - form_for @friendship, :html => {:method => 'delete'} do |f|
           != hidden_field :user, :id
           != submit_tag 'Unfollow'
-    
+
   %p.username== Username: #{@user.login}
   - if @user==current_user
-    %p 
-      if you want an avatar, sign up at 
+    %p
+      if you want an avatar, sign up at
       %a{:href=>'http://www.gravatar.com'} Gravatar
       with the email address you used here.
   %p
@@ -24,4 +24,5 @@
     - @user.friends.each do |friend|
       != link_to friend.login, user_profile_path(:login => friend.login)
 #spot_list
-  != render :partial => 'spots/spot', :collection => @spots.reverse
+  != render :partial => 'spots/spot', :collection => @spots
+  != will_paginate @spots

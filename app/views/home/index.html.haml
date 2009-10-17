@@ -21,4 +21,5 @@
 
 %h2 Public Timeline
 #spot_list
-  != render :partial => 'spots/spot', :collection => @spots.reverse
+  != render :partial => 'spots/spot', :collection => @spots
+  != will_paginate @spots
